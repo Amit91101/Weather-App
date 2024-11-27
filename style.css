@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    background-size: cover;
+    transition: background-color 1s ease, background-image 1s ease;
+}
+
+.weather-container {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, background-color 0.5s ease;
+}
+
+.weather-container:hover {
+    transform: scale(1.05);
+}
+
+.temperature {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+    font-size: 20px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.date-time {
+    margin-top: 20px;
+    font-size: 14px;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #ffcc00;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: #843c50;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #c38a27;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.sunny {
+    background-color: #ffcc00;
+    background-image: linear-gradient(45deg, #ffcc00, #ff6600);
+}
+
+.cloudy {
+    background-color: #6b6b6b;
+    background-image: linear-gradient(45deg, #6b6b6b, #999999);
+}
+
+.rainy {
+    background-color: #0099cc;
+    background-image: linear-gradient(45deg, #0099cc, #006699);
+}
+
+.snowy {
+    background-color: #99ccff;
+    background-image: linear-gradient(45deg, #99ccff, #66ccff);
+}
+
+/* Animation for background transition */
+@keyframes fadeInBackground {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.sunny, .cloudy, .rainy, .snowy {
+    animation: fadeInBackground 1s ease-in-out;
+}
